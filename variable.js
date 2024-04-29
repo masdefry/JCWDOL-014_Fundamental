@@ -1,3 +1,4 @@
+'use strict';
 console.log('Hello, World!')
 console.log(123)
 
@@ -56,3 +57,31 @@ point = 10
 
 var discount = 10
 var discount = 100
+
+
+
+// VAR x LET x CONST
+// VAR
+// Memperbolehkan Variable dengan Nama yg Sama
+var student = 'Ryan';
+var student = 'Defryan';
+
+// Valuenya Bisa Berubah
+var score = 10
+score = 100
+
+// LET 
+// Tidak Memperbolehkan Variable dengan Nama yg Sama
+// const gaming = 'FIFA'
+// const gaming = 'FIFA'
+
+// Valuenya Bisa Berubah
+let score1 = 100
+score1 = 200
+
+// CONST
+// Tidak Memperbolehkan Variable dengan Nama yg Sama
+
+// Valuenya Tidak Dapat Diubah
+const score2 = 100
+score2 = 200
