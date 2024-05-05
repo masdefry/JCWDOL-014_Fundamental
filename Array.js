@@ -96,7 +96,7 @@ for(let start=1; start<=5; start++){
 // .forEach: Mirip Seperti Looping For Biasa
 const arr = ['JCWD', 'JCDM', 'JCDS']
 arr.forEach((value, idx) => {
-    return value
+    value
 })
 
 // .map: Menghasilkan Array Baru
