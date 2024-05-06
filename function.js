@@ -53,14 +53,29 @@ function Penjumlahan(num1, num2){ // num1 = 10; num2 = 5
 
 Penjumlahan(10, 5)
 
+// FUNCTION with RETURN
+function Perkalian(num1, num2){
+    return num1 * num2 
+}
+
+const resultPerkalian = Perkalian(10, 5) + 5
+console.log(resultPerkalian)
 
 
 
+// Exercise. Buatlah Mini Aplikasi Calculator dengan Menggunakan Function.
+//           Fitur: Penjumlahan, Pengurangan, Pembagian dan Perkalian
+function Calculator(num1, num2, operation){
+    if(operation === '+') return num1 + num2 
+    if(operation === '-') return num1 - num2 
+    if(operation === '*') return num1 * num2 
+    if(operation === '/') return num1 / num2 
+}
 
-
-
-
-
+// const resultOperation = Calculator(10, 5, '+')
+// console.log(resultOperation)
+console.log(Calculator(10, 1000000, '+'))
+'+ / - / * / /'
 
 
 
