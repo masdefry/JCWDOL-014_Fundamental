@@ -1,18 +1,22 @@
 <script>
-    const productsName = ['Apel', 'Jeruk', 'Anggur']
-    const productsPrice = [10000, 15000, 20000]
+    const products = [
+        { name: 'Apel', price: 10000 }, 
+        { name: 'Anggur', price: 15000 }, 
+        { name: 'Jeruk', price: 20000 }
+    ]
 
     let printProduct = ''
-    productsName.forEach((product, index) => {
-        printProduct += `${index+1}. ${product} \n`
+    products.forEach((product, index) => {
+        console.log(product)
+        printProduct += `${index+1}. ${product.name} \n`
     })
 
     const selectedProduct = Number(prompt(printProduct)) // Bilangan
     // console.log(isNaN(selectedProduct))
 
-    if(selectedProduct <= 0 || selectedProduct > productsName.length || isNaN(selectedProduct)){
+    if(selectedProduct <= 0 || selectedProduct > products.length || isNaN(selectedProduct)){
         alert('Product Not Found!')
     }else{
-        alert(`${productsName[selectedProduct-1]} = Rp.${productsPrice[selectedProduct-1].toLocaleString('id-ID')}`)
+        alert(`${products[selectedProduct-1].name} = Rp.${products[selectedProduct-1].price.toLocaleString('id-ID')}`)
     }
 </script>
