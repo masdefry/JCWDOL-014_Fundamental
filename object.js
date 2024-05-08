@@ -51,4 +51,32 @@ const student = {
 }
 
 console.log(student?.fullName?.firstname) // Conditional Chaining
+console.log(student['fullname']['firstName'])
 
+const students = [
+    {
+        fullname: 'Defryan'
+    }, 
+    {
+        fullname: 'Immanuel'
+    }, 
+    {
+        fullname: 'Aboy'
+    }
+]
+
+students[1].fullname // Immanuel
+
+
+
+// DESTRUCTURING ASSIGNMENT
+// Mengkonversi Property Obj Menjadi Variable JS
+
+const objCampusPwd = {
+    name: 'Pwd BSD', 
+    address: 'GOP-09'
+}
+
+const {address, name} = objCampusPwd
+console.log(name)
+console.log(address)
