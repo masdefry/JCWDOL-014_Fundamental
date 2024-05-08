@@ -1,0 +1,14 @@
+<script>
+    const productsName = ['Apel', 'Anggur', 'Jeruk']
+    const productsPrice = [10000, 15000, 20000]
+
+    let showProducts = ''
+
+    for(let i=0; i<=productsName.length-1; i++){
+        showProducts += `${i+1}. ${productsName[i]} = Rp.${productsPrice[i].toLocaleString('id-ID')} \n`
+    }
+    
+    const selectedProduct = prompt(showProducts)
+
+    if(selectedProduct-1 > productsName.length-1) alert('Product Not Found!')
+</script>

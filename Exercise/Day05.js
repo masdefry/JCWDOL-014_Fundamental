@@ -105,3 +105,37 @@ function FindDifferenceElementInTwoArray(arr1, arr2){
 }
 
 console.log(FindDifferenceElementInTwoArray([1, 3, 5], [2, 4, 5]))
+
+
+
+// SLIDE-03
+// 01
+function ShowPrimitiveData(arrRandom){
+    const arrPrimitiveData = []
+    arrRandom.forEach(data => {
+       if(typeof data !== 'object') arrPrimitiveData.push(data)
+    })
+    return arrPrimitiveData
+}
+console.log(ShowPrimitiveData([1, [], undefined, {}, 'string', {}, []]))
+
+// 02
+function FindSecondSmallest(arrNumbers){    
+    const sortedArrNumbers = arrNumbers.sort((low, high) => low - high)
+    return sortedArrNumbers[1]
+}
+
+console.log(FindSecondSmallest([10, 5, 100, 25, 3, 1, 5, 1000]))
+
+// 03
+function SumTypeOfNumber(arrData){
+    let result = 0
+
+    arrData.forEach(data => {
+        if(typeof data === 'number') result += data 
+    })
+
+    return result 
+}
+
+console.log(SumTypeOfNumber(['3', 1, 'hello', null, false, undefined, 2]))
