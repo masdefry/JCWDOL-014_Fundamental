@@ -1,0 +1,156 @@
+<script>
+    const arrStudents = []
+    
+    class StudentRegistration{
+        username; 
+        email;
+        #password;
+        #phoneNumber;
+
+        constructor(username, email, password, phoneNumber){
+            this.username = username;
+            this.email = email;
+            this.#password = password;
+            this.#phoneNumber = phoneNumber
+        }
+
+        static registrationForm(){
+            const username = prompt('Username')
+            const email = prompt('Email')
+            const password = prompt('Password')
+            const phoneNumber = prompt('Phone Number')
+
+            if(!email.includes('@') && !email.includes('.')){
+                return {error: true, message: 'Email Not Valid'}
+            }else if(password.length < 6 || password.length > 10){
+                return {error: true, message: 'Password Have Minimum & Maximum Length'}
+            }else{
+                return {error: false, data: {username, email, password, phoneNumber}}
+            }
+        }
+    }
+    
+    do{
+        var selectedMenu = prompt('Select Menu: \n 1. Register Student \n 2. Show Student Data')
+    
+        if(selectedMenu === '1'){
+            // Register Student
+            const result = StudentRegistration.registrationForm()
+            
+            if(result.error === true){
+                alert(result.message)
+            }else if(result.error === false){
+                const insertedStudent = new StudentRegistration(result.data.username, result.data.email, result.data.password, result.data.phoneNumber)
+                arrStudents.push(insertedStudent)
+                console.log(arrStudents)
+            }
+        }else if(selectedMenu === '2'){
+            // Show Student Data
+            // Looping
+        }
+    }while(selectedMenu === '1' || selectedMenu === '2')
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
+    class StudentRegistration {
+    #password;
+
+    constructor(name, username, email, address, phoneNumber, programSelected) {
+        this.name = name;
+        this.username = username;
+        this.email = email;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.programSelected = programSelected;
+    }
+
+    setData(username, email, password, phoneNumber) {
+        if (email.includes('@') && email.includes('.')) {
+            this.email = email;
+        } else {
+            throw new Error('Email Not Valid');
+        }
+
+        if (password.length < 6 || password.length > 10) {
+            throw new Error('Password Must be between 6 to 10 characters long');
+        } else {
+            this.#password = password;
+        }
+    }
+
+    static promptStudentData() {
+        const name = prompt('Input Your Name:');
+        const username = prompt('Input Your Username:');
+        const email = prompt('Input Your Email:');
+        const password = prompt('Input Your Password:');
+        const address = prompt('Input Your Address:');
+        const phoneNumber = prompt('Input Your Phone Number:');
+        const programSelected = prompt('Input Your Program (JCWD, JCDS, JCUI/UX, JCDM, JCVD):');
+        
+        return { name, username, email, address, phoneNumber, programSelected };
+    }
+}
+
+const arrData = [];
+
+do {
+    const menu = parseInt(prompt('Enter Your Menu \n 1. Insert \n 2. Show'));
+
+    if (menu === 1) {
+        try {
+            const { username, email, password, phoneNumber } = StudentRegistration.promptStudentData();
+            const student = new StudentRegistration();
+            student.setData(username, email, password, phoneNumber);
+            arrData.push(student);
+        } catch (error) {
+            alert(error.message);
+        }
+    } else if (menu === 2) {
+        let show = '';
+        arrData.forEach(item => {
+            show += `${item.username}, ${item.email}\n`;
+        });
+        alert(show);
+    } else {
+        alert('Invalid menu option. Please enter 1 or 2.');
+    } -->
+} while (true);
+
+</script>
