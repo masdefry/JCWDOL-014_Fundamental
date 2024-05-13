@@ -120,3 +120,15 @@ const userAccount1 = new Users('ryandefryan', 'abc123')
 userAccount1.validateEmail = 'ryan@gmail.com'
 console.log(userAccount1)
 // console.log(userAccount1.showPassword())
+
+
+
+// Case.
+// Program Untuk Menyimpan Data Pendaftaran Student Purwadhika ke 1 Unit, 
+// Validasi Data Inputnya
+// name, username, email (Valid), password (Min: 6, Max: 10), address, 
+// phoneNumber (Show Data: 08123335*****), 
+// programSelected('JCWD', 'JCDM', 'JCDS', 'JCUI/UX', 'JCVD')
+
+// Subject: Exercise Registrasi Student Pwd
+// To: defryan@purwadhika.com
