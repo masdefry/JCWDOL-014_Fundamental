@@ -12,21 +12,30 @@ const DeleteUserByUsername = (username) => {
             }else{
                 reject('Delete Error')
             }
-        }, 5000)
+        }, 1000)
     })
 }
 
 const ShowData = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(db)
-        }, 3000)
+            resolve(users)
+        }, 500)
     })
 }
 
-DeleteUserByUsername('user05')
+DeleteUserByUsername('user01')
+.then(() => {
+    return DeleteUserByUsername('user02')
+})
+.then(() => {
+    return DeleteUserByUsername('user03')
+})
+.then(() => {
+    return ShowData()
+})
 .then((res) => {
-    console.log('.then', res)
+    console.log(res)
 })
 .catch((err) => {
     console.log('.catch', err)
